@@ -1,4 +1,3 @@
-use practice;
 Select * from layoffs;
 
 #create a copy
@@ -10,7 +9,7 @@ SELECT * FROM layoffs;
 
 Select * from layoff;
 
--------------------------------- duplicates-------------------------------------
+-------------------------------------------- duplicates---------------------------------------------------------
 #checking for duplicates
 
 with dup_cte as
@@ -48,7 +47,7 @@ from layoff;
 delete from layoff2
 where row_num > 1;
 
--------------------------- cleaning data ----------------------------------------
+------------------------------------------ cleaning data ---------------------------------------------------------
 #trimming white space from the company name
 
 select company, trim(company)
@@ -119,7 +118,7 @@ alter table layoff2
 modify column `date` DATE;
 
 
------------------------ null values -----------------------------
+------------------------------------------- null values ---------------------------------------------------------
 select *
 from layoff2
 where total_laid_off is null;
